@@ -36,7 +36,13 @@
       "dev-master": "2.1.x-dev"
     }
   },
+  "scripts": {
+    "test": "./vendor/bin/phpunit --bootstrap expression.php tests/*"
+  },
   "require": {
-    "php": "^5.4 || >=7.0 <8.1"
+    "php": "^5.4 || >=7.0 || ^8.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
   }
 }

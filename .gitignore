@@ -1,3 +1,8 @@
 .idea
 phpunit.phar
+.phpunit.result.cache
 *~
+
+# composer vendor dir
+.composer
+vendor

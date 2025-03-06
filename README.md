@@ -86,7 +86,13 @@ Version 2.0
 
 # Contribute
 
-For running tests just run ``$ make``
+For running tests run
+
+```bash
+docker compose up -d
+docker compose exec php8.3 composer install
+docker compose exec php8.3 composer test
+```
 
 # LICENSE
     Redistribution and use in source and binary forms, with or without

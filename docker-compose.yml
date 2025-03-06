@@ -1,0 +1,8 @@
+services:
+  php8.3:
+    build: .
+    restart: always
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "30002:80"
