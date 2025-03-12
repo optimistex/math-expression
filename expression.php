@@ -489,7 +489,7 @@ class Expression
                         $stack->push($op1 * $op2);
                         break;
                     case '/':
-                        if ($op2 === 0) {
+                        if ($op2 === 0 || $op2 === 0.0) {
                             return $this->trigger('division by zero');
                         }
                         $stack->push($op1 / $op2);

@@ -80,9 +80,30 @@ class ExpressionTest extends TestCase
             '.1*.1', '20-20', '-20-20', '20/20', '-20/20', '10%20',
             '10%9', '20%9');
         $this->arrayTest($expressions);
+    }
+
+    // -------------------------------------------------------------------------
+
+    /**
+     * @throws ReflectionException
+     */
+    public function testDivisionByZero()
+    {
         $expr = new Expression();
         $this->expectWarning();
         $expr->evaluate('10/0');
+    }
+
+    // -------------------------------------------------------------------------
+
+    /**
+     * @throws ReflectionException
+     */
+    public function testDivisionByFloatZero()
+    {
+        $expr = new Expression();
+        $this->expectWarning();
+        $expr->evaluate('10/0.0');
     }
 
     // -------------------------------------------------------------------------
